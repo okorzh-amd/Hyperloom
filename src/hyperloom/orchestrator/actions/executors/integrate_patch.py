@@ -4319,8 +4319,7 @@ class IntegratePatchExecutor:
         proposal = self._find_framework_proposal(done_payload)
         if proposal is None:
             # The upstream-PR lane carries the PR identity on the candidate
-            # rather than in a specialist's ``fa_*`` markers. Discovery dedups
-            # on this ledger, so a lane that writes none is re-benched forever.
+            # rather than in a specialist's ``fa_*`` markers.
             proposal = self._upstream_pr_kb_proposal(params or {})
             if proposal is None:
                 return

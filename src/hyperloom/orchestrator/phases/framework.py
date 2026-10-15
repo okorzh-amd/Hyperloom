@@ -122,7 +122,7 @@ def _framework_config_levers_from_done(
                 parsed_args = tokenize_server_args_preserving_json(" ".join(arg_tokens))
                 if parsed_args is None:
                     log.warning(
-                        "FRAMEWORK config lever %r has unparseable server args; dropping the args%s",
+                        "FRAMEWORK config lever %r has unparsable server args; dropping the args%s",
                         entry.get("name"),
                         " while preserving its environment overrides" if extra_envs else "",
                     )
